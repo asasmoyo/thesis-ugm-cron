@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - 1.9.x
+
+install:
+  - go get github.com/asasmoyo/sharelatex2git/cmd/sharelatex2git
+
+script:
+  - sharelatex2git -e $EMAIL -p $PASSWORD -u $URL --git-url https://$GITHUB_TOKEN@$GITHUB_REPO
