@@ -9,4 +9,4 @@ install:
 script:
   - git config --global user.email "$GIT_EMAIL"
   - git config --global user.name "Arba Sasmoyo"
-  - overleaf2git -s $OVERLEAF_SESSION_KEY -u $URL --git-url https://$GITHUB_TOKEN@$GITHUB_REPO
+  - overleaf2git -s $OVERLEAF_SESSION_KEY -u $URL -git-url https://asasmoyo:$GITHUB_TOKEN@$GITHUB_REPO
