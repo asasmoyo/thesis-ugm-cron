@@ -1,7 +1,7 @@
 language: go
 
 go:
-  - 1.9.x
+  - 1.11.x
 
 install:
   - go get github.com/asasmoyo/sharelatex2git/cmd/sharelatex2git
@@ -9,4 +9,4 @@ install:
 script:
   - git config --global user.email "$GIT_EMAIL"
   - git config --global user.name "Arba Sasmoyo"
-  - sharelatex2git -e $EMAIL -p $PASSWORD -u $URL --git-url https://$GITHUB_TOKEN@$GITHUB_REPO
+  - sharelatex2git -s $OVERLEAF_SESSION_KEY -u $URL --git-url https://$GITHUB_TOKEN@$GITHUB_REPO
